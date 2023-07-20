@@ -1,0 +1,265 @@
+#div_all {
+	width: 960px;
+	margin: 5px auto;
+}
+
+#div_all a {
+	text-decoration: none;
+	color: #000;
+	font-size: 14px;
+}
+
+/* 漂浮广告图片容器 div */
+#adv {
+	position: absolute;
+	z-index: 100;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+ul li {
+	list-style: none;
+}
+
+#div_all a:hover {
+	text-decoration: underline;
+}
+
+/* 以下是header栏及其子元素所有样式 */
+#header {
+	height: 130px;
+	background-image: linear-gradient(180deg, #009F50, #007339);
+	border-radius: 8px;
+	color: #fff;
+}
+
+#top_link {
+	float: right;
+	margin-top: -10px;
+}
+
+#top_link ul li {
+	float: left;
+	padding: 5px;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.li_Search {
+	width: 195px;
+	padding-top: 0;
+	background-image: url(../images/p3.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.li_Search input {
+	width: 135px;
+	border: 0;
+	margin-left: 25px;
+}
+
+#site_Logo {
+	clear: both;
+	width: 230px;
+	height: 57px;
+	margin-left: 10px;
+	background: url(../images/p3.jpg);
+}
+
+#nav_menu {
+	margin: -7px;
+}
+
+#nav_menu ul {
+	position: relative;
+}
+
+#nav_menu ul li {
+	float: left;
+	padding: 0 10px;
+	font-size: 15px;
+	font-family: "黑体";
+	line-height: 30px;
+	cursor: pointer;
+}
+
+#nav_menu ul li:hover {
+	background-color: #fff;
+	color: #007339;
+	border-radius: 10px 10px 0 0;
+}
+
+#nav_menu ul li ul {
+	position: absolute;
+	display: none;
+	margin-left: -50px;
+	z-index: 11;
+}
+
+#nav_menu ul li:hover ul {
+	display: block;
+}
+
+#nav_menu ul li ul li {
+	width: 130px;
+	float: none;
+	white-space: nowrap;
+	background-color: #ccc;
+	border-top: 1px dotted #007339;
+}
+
+#nav_menu ul li ul li a {
+	text-decoration: none;
+	color: #007339;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+#nav_menu ul li ul li a:hover {
+	color: #fff;
+}
+
+#nav_menu ul li ul li:hover {
+	border-radius: 0;
+	background-color: #008040;
+	color: #fff;
+}
+
+/* 以下是wrapper栏及其子元素所有样式 */
+#wrapper {
+	clear: both;
+	margin-bottom: 5px;
+}
+
+#wrapper td {
+	border: 1px solid #e0e0e0;
+	float: left;
+	margin: 0 3px;
+}
+
+#wrapper td p {
+	border-top: 1px solid #e0e0e0;
+	margin: 0;
+}
+
+/* 以下是图片轮播栏indexFocus及其子元素所有样式 */
+.indexFocus .focusBox {
+	width: 930px;
+	height: 310px;
+	position: relative;
+	margin: 0;
+}
+
+.indexFocus .focusBox .bigPic {
+	width: 930px;
+	height: 310px;
+	overflow: hidden;
+	position: relative;
+	font-size: 0;
+}
+
+.indexFocus .focusBox .bigPic img {
+	width: 930px;
+	height: 310px;
+	margin: 0;
+	padding: 0;
+	border: 2px solid #ccc;
+}
+
+.indexFocus .focusBox .btn {
+	height: 16px;
+	position: absolute;
+	right: 8px;
+	bottom: 20px;
+	z-index: 10;
+}
+
+.indexFocus .focusBox .btn ul li {
+	width: 15px;
+	height: 15px;
+	font-size: 14px;
+	line-height: 15px;
+	margin-right: 2px;
+	display: block;
+	background: #fff;
+	float: left;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.indexFocus .focusBox .btn .sel {
+	width: 15px;
+	height: 15px;
+	background: #b90101;
+	color: #fff;
+}
+
+.indexFocus .focusBox .picText_bg {
+	width: 890px;
+	height: 26px;
+	position: absolute;
+	left: 40px;
+	bottom: 0;
+	background: #ccc;
+	opacity: 0.5;
+}
+
+/* 以下是热点商品栏hot_Goods及其子元素所有样式 */
+#hot_Goods {
+	font-size: 12px;
+}
+
+#hot_Goods a {
+	color: #009f50;
+}
+
+#hot_Goods h3 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.sub_Goods {
+	width: 32%;
+	float: left;
+	margin-right: 3px;
+}
+
+.down_line {
+	border-bottom: 2px solid #009f50;
+}
+
+/* 以下是快速导航栏quick_Nav及其子元素所有样式 */
+#quick_Nav {
+	clear: both;
+	height: 280px;
+	background-color: #d2ffd2;
+	border-top: 2px solid #009f50;
+	border-radius: 0 0 10px 10px;
+}
+
+.sub_Nav {
+	width: 15%;
+	float: left;
+	margin-right: 3px;
+	font-size: 12px;
+	line-height: 1.8em;
+}
+
+.sub_Nav ul li {
+	text-indent: 0.5em;
+}
+
+.Nav_title {
+	font-weight: bold;
+}
+
+.sjx {
+	width: 20px;
+	height: 20px;
+}
+
+.sub_Goods_img_left {
+	width: 125px;
+	height: 80px;
+}
