@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>中国京剧网</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+
+			img {
+				vertical-align: middle;
+			}
+			
+			.wrap{
+				width: 1240px;
+				margin: 0 auto;
+			}
+
+			.left {
+				float: left;
+			}
+
+			.right {
+				float: right;
+			}
+
+			.header {
+				height: 60px;
+				background-color: indianred;
+			}
+			
+			.header .left img{
+				margin-left: 20px;
+				width: 60px;
+				height: 60px;
+			}
+			
+			.header .left span{
+				color: #dcdcdc;
+				font-size: 22px;
+				font-weight: bold;
+			}
+
+			.shortcut li {
+				float: left;
+				line-height: 52px;
+			}
+
+			.shortcut a {
+				padding: 0 16px;
+				border-right: 1px solid #666;
+				font-size: 14px;
+				color: #dcdcdc;
+			}
+
+			.navigation {
+				height: 70px;
+				margin-left: 30%;
+			}
+
+			.navigation li {
+				float: left;
+				margin-right: 20px;
+				line-height: 70px;
+			}
+
+			.navigation li a {
+				padding-bottom: 7px;
+			}
+
+			.navigation li a:hover {
+				color: #27ba9b;
+				border-bottom: 1px solid #27ba9b;
+			}
+			
+			.content{
+				height: 592px;
+				margin-left: 50px;
+			}
+			
+			.content .login{
+				width: 356px;
+				height: 339px;
+			}
+			
+			.content .login h2 {
+				margin-top: 10px;
+				height: 50px;
+				font-size: 30px;
+				font-weight: 400;
+				text-align: center;
+			}
+			
+			.content .login input{
+				width: 356px;
+				height: 50px;
+				border: 1px solid #ccc;
+				padding-left: 15px;
+				margin-bottom: 14px;
+				box-sizing: border-box;
+			}
+			
+			.content .login button{
+				width: 356px;
+				height: 50px;
+				background-color: indianred;
+				border: none;
+				color: #fff;
+			}
+			
+			.content .hots{
+				height: 220px;
+				box-sizing: border-box;
+				padding: 10px 10px 0;
+			}
+			
+			.content .qk h2{
+				border-left: 5px solid indianred;
+				padding-left: 10px;
+				margin-bottom: 5px;
+				height: 25px;
+				font-size: 18px;
+				line-height: 25px;
+			}
+			
+			.content .hots ul{
+				padding: 0 10px;
+			}
+			
+			.content .hots ul li{
+				height: 30px;
+				padding-left: 15px;
+				line-height: 30px;
+			}
+			
+			.content .hots ul li a{
+				color: #551a8b;
+			}
+			
+			.content .mj{
+				height: 150px;
+			}
+			
+			.content .mj h2{
+				transition: all .5s;
+			}
+			
+			.content .mj h2:hover{
+				color: indianred;
+			}
+			
+			.content .mj li img{
+				/* height: 600px; */
+				float: left;
+				padding-left: 10px;
+				width: 100px;
+				height: 100px;
+				border-radius: 100%;
+				box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+			}
+			
+			.content .jc{
+				height: 200px;
+			}
+			
+			.footer{
+				height: 100px;
+				background-color: #333;
+			}
+			
+			.footer .copyright{
+				padding-top: 10px;
+				text-align: center;
+				color: #fff;
+				font-size: 15px;
+			}
+			
+			.footer .copyright a{
+				color: #fff;
+				padding: 0 10px 0 6px;
+				border-right: 1px solid #fff;
+			}
+			
+			.footer .copyright a:last-child{
+				border-right: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="left">
+				<img src="img/favicon.png" alt="">
+				<span>中国京剧</span>
+			</div>
+			<div class="right shortcut">
+				<ul>
+					<li><a href="#">邮件系统</a></li>
+					<li><a href="#">英文版本</a></li>
+					<li><a href="#">旧版入口</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="navigation">
+			<ul>
+				<li><a href="#">新闻咨询</a></li>
+				<li><a href="#">京剧唱段</a></li>
+				<li><a href="#">京剧视频</a></li>
+				<li><a href="#">京剧伴奏</a></li>
+				<li><a href="#">京剧名家</a></li>
+				<li><a href="#">京剧名票</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="login right">
+				<h2>账号登录</h2>
+				<form action="">
+					<input type="text" placeholder="邮箱/手机">
+					<input type="password" placeholder="密码">
+					<button>登录</button>
+				</form>
+			</div>
+			
+			<div class="qk left">
+				<div class="hots">
+					<h2>热点推送</h2>
+					<ul>
+						<li><a href="#">风华正茂 继往开来--观中国戏曲学院优秀教学成果展演</a></li>
+						<li><a href="#">载歌载舞 形式新颖--看北京曲剧《我这一辈子》</a></li>
+						<li><a href="#">著名京剧打击乐演奏家王庆荣先生收徒侯晓军拜师仪式</a></li>
+						<li><a href="#">刘杰|詹磊的“修行”有硕果</a></li>
+						<li><a href="#">梅风晶韵绘丹青</a></li>
+					</ul>
+				</div>
+				<div class="mj">
+					<h2>京剧名家</h2>
+					<ul>
+						<li><img src="img/mj1_zbg.jpg" alt=""></li>
+						<li><img src="img/mj2_mlf.jpg" alt=""></li>
+						<li><img src="img/mj2_sxy.jpg" alt=""></li>
+						<li><img src="img/mj2_xch.jpg" alt=""></li>
+					</ul>
+				</div>
+				<div class="jc">
+					<h2>精彩唱段</h2>
+					<video src="Video/ZXT.mp4" width="200px" height="200px" controls></video>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="copyright">
+				<p>
+					<a href="javascript:;">版权声明</a>
+					<a href="javascript:;">隐私声明</a>
+					<a href="javascript:;">联系我们</a>
+				</p>
+				<br />
+				<p>Copyright&copy;中国京剧网</p>
+				<p>戏曲协会地址：xxxxxxxxx</p>
+			</div>
+		</div>
+	</body>
+</html>
