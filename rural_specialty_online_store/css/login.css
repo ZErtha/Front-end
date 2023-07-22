@@ -1,0 +1,143 @@
+/* 页面弹窗登录样式 */
+
+/* 登录 */
+.black_overlay {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 1001;
+	-moz-opacity: 0.8;
+	opacity: .80;
+	filter: alpha(opacity=88);
+}
+
+.white_content {
+	display: none;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	padding: 20px;
+	/* border: 10px solid orange; */
+	background-color: white;
+	border-radius: 12px;
+	z-index: 1002;
+	overflow: auto;
+}
+
+/* 问题:外层容器height使用百分比时，如何设置line-height可以使里面的文字垂直居中 */
+
+/* 解决方法一：
+父元素设置display:table
+需要居中的元素 设置 ：
+vertical-align:middle;
+display:table-cell;
+
+解决方法二：
+需要居中的元素设置(弹性布局及居中属性) ：
+display:flex; //弹性布局，可以应用于容器中，也可以应用于行内元素
+align-items:center; //元素在该行的侧轴（纵轴）上居中放置。
+justify-content:center; //元素在横轴上居中排列 */
+
+.white_content .login_logo {
+	width: 50%;
+	height: 100%;
+	/* text-align: center;
+				display: table; */
+	text-align: center;
+	/*弹性布局及属性*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #5eb69c;
+	border-radius: 25px;
+}
+
+.white_content .login_logo h3 {
+	color: #fff;
+}
+
+/* .white_content .login_logo .tab {
+	display: table-cell;
+	vertical-align: middle;
+} */
+
+.white_content .login_content {
+	padding-left: 10%;
+	width: 50%;
+	height: 100%;
+	/* background-color: skyblue; */
+}
+
+.white_content .login_content span {
+	margin-right: 55%;
+	font-size: 18px;
+}
+
+.white_content .login_content .login_content_form {
+	margin-top: 15%;
+}
+
+.white_content .login_content .login_content_form p {
+	margin-bottom: 5%;
+}
+
+.white_content .login_content .login_content_form p input {
+	caret-color: #4e6ef2;
+	position: relative;
+	z-index: 17;
+	box-sizing: border-box;
+	display: block;
+	padding: 10px 20px;
+	margin: 0;
+	height: 48px;
+	line-height: 20px;
+	width: 90%;
+	border: 1px solid #b8b8b8;
+	font-size: 18px;
+	color: #1f1f1f;
+	transition: .3s;
+	font-family: PingFangSC-Regular, Tahoma, Helvetica, "Microsoft Yahei", "微软雅黑", Arial, STHeiti;
+	border-radius: 8px;
+}
+
+.white_content .login_content a {
+	color: #4e6ef2;
+}
+
+.white_content .login_content .login_content_form .login_btn {
+	/* width: 336px;
+				height: 48px; */
+	/* line-height: 48px; */
+	background: #5eb69c;
+	border-radius: 10px;
+	box-shadow: 0 6px 16px 0 rgb(78 111 242 / 30%);
+	font-size: 17px;
+	font-weight: 800;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* 登录-忘记密码 */
+.forgot_password {
+	margin-bottom: 5%;
+}
+
+
+/* .white_content .login_content .login_content_top::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: #4e6ef2;
+	border-radius: 1px;
+} */

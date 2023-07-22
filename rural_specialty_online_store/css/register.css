@@ -1,0 +1,212 @@
+/* 注册页面样式 */
+body,
+button,
+input,
+select,
+textarea,
+pre {
+	font-size: 14px;
+	font-family: Arial, "宋体";
+}
+
+body {
+	font-family: PingFang-SC-Regular, Helvetica, "Microsoft Yahei", "微软雅黑";
+	background-image: url("../img/fruits_larger_view(1).png");
+	background-repeat: no-repeat;
+	background-color: #84bb06;
+}
+
+.white_content {
+	width: 40%;
+}
+
+.white_content .login_logo {
+	width: 40%;
+}
+/* 注册框内容 */
+.mod-new-reg-content {
+	position: absolute;
+	right: 139px;
+	top: 50%;
+	width: 480px;
+	height: 554px;
+	margin-top: -277px;
+	background: rgba(255, 255, 255, .8);
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.mod-new-reg-content .new-reg-guide-login h3 {
+	font-size: 36px;
+	color: #000;
+	padding-bottom: 4px;
+}
+
+.mod-new-reg-content .new-reg-guide-login {
+	margin: 30px 0 0 39px;
+}
+
+.mod-new-reg-content .new-reg-guide-login p {
+	font-size: 14px;
+	color: #9B9B9B;
+}
+
+.mod-new-reg-content .new-reg-guide-login p a:hover {
+	color: #0F3CF2;
+}
+
+
+/* 注册表单 */
+.pass-reg {
+	padding-top: 40px;
+	overflow: initial
+}
+
+.pass-reg .pass-form-item {
+	height: 40px;
+	margin-bottom: 32px;
+	position: relative;
+	clear: both;
+}
+
+.pass-reg .pass-label {
+	display: block;
+	float: left;
+	height: 42px;
+	width: 65px;
+	margin-right: 10px;
+	line-height: 42px;
+	font-size: 14px;
+	color: #666;
+	font-weight: 700;
+	text-align: right;
+	letter-spacing: 0;
+}
+
+.pass-reg .pass-text-input {
+	display: block;
+	position: relative;
+	float: left;
+	height: 16px;
+	width: 328px;
+	padding: 11px 10px;
+	margin-right: 10px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	color: #666;
+	transition: .3s;
+}
+
+.pass-reg .pass-text-input-verifyCode {
+	width: 184px;
+	margin-right: 9px;
+}
+
+.pass-reg input.pass-button-verifyCodeSend {
+	width: 126px;
+	border-radius: 4px;
+	background: #fff;
+	border: 1px solid #E0E0E0;
+	font-size: 12px;
+	color: #333;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 24px;
+}
+
+.pass-reg input.pass-button-verifyCodeSend {
+	border-radius: 0;
+	border: 1px solid #ddd;
+	height: 40px;
+	background: #f7f7f7;
+	color: #666;
+	font-weight: 400;
+	width: 160px;
+	float: left;
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+.pass-reg .pass-button {
+	border: 0;
+}
+
+.pass-reg .pass-button {
+	display: block;
+	height: 50px;
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
+	color: #fff;
+}
+
+.pass-reg .pass-button-submit {
+	background: #BDCEFC;
+	border-radius: 25px;
+	width: 399px;
+}
+
+.pass-reg .pass-button-submit {
+	background-color: #5eb69c;
+}
+
+.pass-reg .pass-button-submit {
+	float: left;
+	width: 350px;
+}
+
+.pass-reg .pass-form-item-submit .pass-form-item-submit-v5 {
+	padding-top: 40px;
+	margin-top: 0;
+}
+
+.pass-reg .pass-form-item-submit .pass-form-item-submit-v5 {
+	margin-bottom: 15px;
+	margin-top: 73px;
+	*padding-top: 73px;
+}
+
+.pass-reg .pass-form-item-submit {
+	left: 41px;
+}
+
+.pass-reg .pass-form-item-submit {
+	position: relative;
+	left: 75px;
+}
+
+.pass-reg .pass-form-item {
+	position: relative;
+	clear: both;
+	margin-bottom: 20px;
+	zoom: 1;
+}
+
+.pass-reg .pass-form-item {
+	margin-bottom: 32px;
+}
+
+.pass-reg .pass-form-item-isAgree {
+	text-align: center;
+}
+
+.pass-reg .pass-form-item-isAgree {
+	margin-left: 41px;
+	width: 399px;
+	text-align: center;
+}
+
+.pass-reg .pass-form-item-isAgree .pass-checkbox-isAgree {
+	position: relative;
+	top: -2px;
+}
+
+.pass-reg .pass-form-item-isAgree .pass-checkbox-isAgree {
+	vertical-align: middle;
+}
+
+.pass-reg .pass-form-item-isAgree label {
+	color: #666;
+	font-size: 12px;
+	margin-left: 5px;
+}

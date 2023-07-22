@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/login.css">
+		<link rel="stylesheet" href="css/car.css">
+		<script src="js/login.js"></script>
+	</head>
+	<body>
+		<div id="light" class="white_content">
+			<div class="login_logo fl">
+				<div class="tab">
+					<h3>助农网LOGO</h3>
+				</div>
+			</div>
+			<div class="login_content fl">
+				<span>账号登录</span>
+				<a href="javascript:void(0)" onclick="loginClose()">关闭</a>
+
+				<form class="login_content_form" action="">
+					<p>
+						<input type="text" value="" placeholder="手机号/用户名/邮箱">
+					</p>
+					<p>
+						<input type="password" value="" placeholder="密码">
+					</p>
+					<a class="forgot_password fr" href="javascript:void(0)">忘记密码？</a>
+					<p>
+						<input class="login_btn" type="submit" value="登录">
+					</p>
+				</form>
+			</div>
+		</div>
+		<div id="fade" class="black_overlay"></div>
+		<iframe src="shortcut.html" width="100%" height="52px" frameborder="0" scrolling="no"></iframe>
+		<iframe src="header.html" width="100%" height="130px" frameborder="0" scrolling="no"></iframe>
+		<div class="car_body">
+			<div class="car_body_content wrapper">
+				<div class="car_body_content_top">
+					<div class="car_body_content_top_left fl">
+						<p>购物车（全部1）</p>
+					</div>
+					<div class="car_body_content_top_right fr">
+						<span>已选商品（不含运费）</span>
+						<span>0.00</span>
+						<input class="car_btn" type="submit" value="结算">
+					</div>
+				</div>
+				<div class="tips wrapper">
+					<ul>
+						<li>
+							<input type="checkbox" name="fav" id="all" onclick="checkTest1(this),checkTest2()" />全选
+						</li>
+						<li>商品</li>
+						<li>单价</li>
+						<li>数量</li>
+						<li>小计</li>
+						<li>操作</li>
+					</ul>
+				</div>
+				
+				<div class="info wrapper">
+					<ul>
+						<li class="info_1"><input type="checkbox" name="fav" onclick="checkTest2()" /></li>
+						<li class="info_2">
+							<img src="img/pear.jpg" width="100px" />
+						</li>
+						<li class="info_3">新鲜雪梨赵州雪花梨</li>
+						<li class="info_4">19.0</li>
+						<li class="info_6">
+							<button onclick="checkTest3(this,1),checkTest2()">-</button>
+							<input type="text" name="nu" value="1" onblur="checkTest5(this),checkTest2()" />
+							<button onclick="checkTest3(this,2),checkTest2()">+</button>
+						</li>
+						<li class="info_7">¥0.00</li>
+						<li class="info_8">
+							<a href="javascript:viod(0)" onclick="checkTest4(this),checkTest2()">删除</a><br />
+							<a>移入收藏</a>
+						</li>
+					</ul>
+				</div>
+				<div class="balance wrapper">
+					<ul class="balance_ul1">
+						<li>
+							<input type="checkbox" name="fav" onclick="checkTest1(this),checkTest2()" />
+							全选
+						</li>
+						<li><a href="javascript:void(0)" onclick="checkTest6(),checkTest2()">删除选中的商品</a></li>
+						<li><a>移到收藏</a></li>
+						<li><a>清理购物车</a></li>
+					</ul>
+					<ul class="balance_ul2">
+						<li>已选择&nbsp;<b id="tn">0</b>&nbsp;件商品</li>
+						<li>总价：<b id="tp">¥0.00</b>&nbsp;
+							<svg class="icon" aria-hidden="true" onmouseover="tips()">
+								<use xlink:href="#icon-dengpao1hao"></use>
+							</svg>
+						</li>
+						<li><button class="car_btn">去结算</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<iframe src="footer.html" width="100%" height="350px" frameborder="0" scrolling="no"></iframe>
+	</body>
+</html>

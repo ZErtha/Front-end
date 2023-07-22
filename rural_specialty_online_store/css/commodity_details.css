@@ -1,0 +1,131 @@
+/* 商品详情页样式 */
+
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.details_body {
+	padding: 0 0 30px;
+}
+
+.test_center {
+	height: 500px;
+}
+
+.test_center .left_guangao {
+	width: 30%;
+	height: 500px;
+	background-color: #5eb69c;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.test_center .left_guangao .shuli {
+	padding-top: 100px;
+	margin: 0 auto;
+	width: 20px;
+	color: #fff;
+	font-size: 25px;
+	line-height: 300%;
+}
+
+.test_center .right_content {
+	width: 68%;
+	height: 500px;
+}
+
+.test_center .right_content .details_content_top {
+	height: 60%;
+}
+
+.test_center .right_content .details_content_top .details_content_top_img {
+	width: 30%;
+	height: 100%;
+}
+
+.test_center .right_content .details_content_top .details_content_top_right_content {
+	width: 70%;
+	height: 100%;
+	padding-left: 10%;
+	line-height: 300%;
+}
+
+.test_center .right_content .details_content_top .details_content_top_right_content .details_title {
+	font-size: 25px;
+}
+
+.test_center .right_content .details_content_top .details_content_top_right_content .details_btn {
+	width: 150px;
+	height: 48px;
+	line-height: 48px;
+	background: #5eb69c;
+	border-radius: 10px;
+	box-shadow: 0 6px 16px 0 rgb(78 111 242 / 30%);
+	font-size: 17px;
+	font-weight: 800;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	margin-top: 40px;
+	margin-right: 50px;
+}
+
+/* 用纯CSS改变下拉列表Select框的默认样式 */
+.test_center .right_content .details_content_top .details_content_top_right_content select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: transparent;
+	border: none;
+	padding-left: 10px;
+	width: 70px;
+	height: 100%;
+}
+
+.test_center .right_content .details_content_bottom {
+	height: 40%;
+	border-top: 1px solid #5eb69c;
+}
+
+.test_center .right_content .details_content_bottom p {
+	padding: 20px;
+	text-indent: 2em;
+}
+
+/* 去除input[type=number]默认样式 */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input.number {
+	display: inline-block;
+	width: 72px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	background-image: url("../img/bg_number_box1.png");
+	background-repeat: no-repeat;
+	background-size: 72px 20px;
+	border: none;
+	cursor: pointer;
+}
+
+input.number:focus {
+	/* 默认背景图片1，获得焦点改成图片2 */
+	background-image: url("../img/bg_number_box2.png");
+	border: none;
+}
+
+select {
+	cursor: pointer;
+}

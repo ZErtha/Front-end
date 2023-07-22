@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>助农网注册</title>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/login.css">
+		<link rel="stylesheet" href="css/register.css">
+		<script src="js/login.js"></script>
+	</head>
+	<body>
+		<div id="light" class="white_content">
+			<div class="login_logo fl">
+				<div class="tab">
+					<h3>助农网LOGO</h3>
+				</div>
+			</div>
+			<div class="login_content fl">
+				<span>账号登录</span>
+				<a href="javascript:void(0)" onclick="loginClose()">关闭</a>
+
+				<form class="login_content_form" action="">
+					<p>
+						<input type="text" value="" placeholder="手机号/用户名/邮箱">
+					</p>
+					<p>
+						<input type="password" value="" placeholder="密码">
+					</p>
+					<a class="forgot_password fr" href="javascript:void(0)">忘记密码？</a>
+					<p>
+						<input class="login_btn" type="submit" value="登录">
+					</p>
+				</form>
+			</div>
+		</div>
+		<div id="fade" class="black_overlay"></div>
+
+		<div class="mod-new-reg-content">
+			<div id="new_reg_guide_login" class="new-reg-guide-login">
+				<h3>欢迎注册</h3>
+				<p>
+					已有帐号？
+					<a href="javascript:void(0)" onclick="pop()">登录</a>
+				</p>
+			</div>
+			<div id="reg_content" class="reg-content">
+				<form id="reg_content_form" class="pass-reg" action="">
+					<p class="pass-form-item">
+						<label class="pass-label" for="reg_content_form_userName">用户名</label>
+						<input id="reg_content_form_userName" class="pass-text-input" type="text" name="userName"
+							autocomplete="off" value="" placeholder="请设置用户名">
+					</p>
+
+					<p class="pass-form-item">
+						<label class="pass-label" for="reg_content_form_userPhone">手机号</label>
+						<input id="reg_content_form_userPhone" class="pass-text-input" type="text" name="userPhone"
+							autocomplete="off" value="" placeholder="可用于登录和找回密码">
+					</p>
+
+					<p class="pass-form-item">
+						<label class="pass-label" for="reg_content_form_password">密码</label>
+						<input id="reg_content_form_password" class="pass-text-input" type="password"
+							name="userPassword" autocomplete="off" value="" placeholder="请设置登录密码">
+					</p>
+
+					<p class="pass-form-item">
+						<label class="pass-label" for="reg_content_form_verifyCodeSendWrapper">验证码</label>
+						<input id="reg_content_form_verifyCodeSendWrapper"
+							class="pass-text-input pass-text-input-verifyCode" type="text" name="verifyCode"
+							autocomplete="off" maxlength="6" placeholder="请输入验证码">
+						<input id="reg_content_form_verifyCodeSend" class="pass-button-verifyCodeSend" type="button"
+							autocomplete="off" value="获取验证码">
+					</p>
+
+					<p class="pass-form-item pass-form-item-submit pass-form-item-submit-v5">
+						<input id="reg_content_form_submit" class="pass-button pass-button-submit" type="submit"
+							disabled="" value="注册">
+					</p>
+
+					<p id="pass-form-item-isAgreeWrapper" class="pass-form-item pass-form-item-isAgree">
+						<input id="reg_content_form_isAgree" class="pass-checkbox-input pass-checkbox-isAgree"
+							type="checkbox" name="isAgree" autocomplete="off">
+						<label for="reg_content_form_isAgree">阅读并接受</label>
+						<a href="#" target="_blank">《用户协议》</a>及
+						<a href="#" target="_blank">《隐私权保护声明》</a>
+					</p>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

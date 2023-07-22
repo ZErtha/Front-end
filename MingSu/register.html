@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>民宿网注册页面</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+			}
+
+			h1 {
+				font-size: 40px;
+			}
+
+			a {
+				color: #666;
+				text-decoration: none
+			}
+
+			input {
+				margin-top: 10px;
+				margin-bottom: 20px;
+			}
+
+			.center {
+				margin: 0 auto;
+				height: 800px;
+				width: 800px;
+			}
+
+			.center .top {
+				margin-top: 50px;
+				height: 70px;
+			}
+
+			.left {
+				float: left;
+			}
+
+			.left img {
+				margin-left: 20px;
+				width: 60px;
+				height: 60px;
+				border-radius: 100%;
+				vertical-align: middle;
+			}
+
+			.left span {
+				color: #796e6a;
+				font-size: 22px;
+				font-weight: bold;
+			}
+
+			.right {
+				float: right;
+			}
+
+			.center .content .content_input {
+				width: 800px;
+				height: 40px;
+				border: 1px solid #ccc;
+			}
+
+			.center .content .content_submit {
+				width: 800px;
+				height: 40px;
+				border: 0;
+				background-color: #027afb;
+				color: #fff;
+			}
+
+			.footer {
+				height: 70px;
+				background-color: #333;
+			}
+
+			.footer .copyright {
+				padding-top: 10px;
+				text-align: center;
+				color: #fff;
+				font-size: 15px;
+			}
+
+			.footer .copyright p {
+				line-height: 1;
+			}
+
+			.footer .copyright a {
+				color: #fff;
+				line-height: 1;
+				padding: 0 10px 0 6px;
+				border-right: 1px solid #fff;
+			}
+
+			.footer .copyright a:last-child {
+				border-right: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="center">
+			<div class="top">
+				<div class="left">
+					<img src="img/logo.jpg" alt="">
+					<span>特色名宿</span>
+				</div>
+				<div class="right">
+					<h1>注册</h1>
+				</div>
+
+			</div>
+			<div class="content">
+				<form action="">
+					<span>账号：</span><br />
+					<input class="content_input" type="text">
+					<br />
+					<span>密码：</span><br />
+					<input class="content_input" type="password">
+					<br />
+					<span>确认密码：</span><br />
+					<input class="content_input" type="password">
+					<br />
+					<span>性别：</span>
+					<label><input type="radio" name="sex">男</label>
+					<label><input type="radio" name="sex">女</label>
+					<br />
+					<span>邮箱：</span><br />
+					<input class="content_input" type="text">
+					<br />
+					<span>昵称：</span><br />
+					<input class="content_input" type="text">
+					<br />
+					<span>手机号：</span><br />
+					<input class="content_input" type="text">
+					<input class="content_submit" type="submit" value="注册">
+				</form>
+
+			</div>
+		</div>
+		<div class="footer">
+			<div class="copyright">
+				<p>
+					<a href="javascript:;">服务条款</a>
+					<a href="javascript:;">隐私策略</a>
+					<a href="javascript:;">广告服务</a>
+					<a href="javascript:;">客服中心</a>
+				</p>
+				<br />
+				<p>民宿网</p>
+			</div>
+		</div>
+
+	</body>
+</html>

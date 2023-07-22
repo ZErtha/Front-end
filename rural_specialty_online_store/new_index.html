@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>助农网</title>
+		<style>
+			/* 清除默认样式的代码 */
+			/* 去除常见标签默认的 margin 和 padding */
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			/* 內减模式 */
+			* {
+				box-sizing: border-box;
+			}
+
+			/* 设置网页统一的字体大小、行高、字体系列相关属性 */
+			body {
+				font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei",
+					"Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+				color: #333;
+			}
+
+			/* 去除列表默认样式 */
+			ul,
+			ol {
+				list-style: none;
+			}
+
+			/* 去除a标签默认下划线，并设置默认文字颜色 */
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+
+			/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+			img {
+				vertical-align: middle;
+			}
+
+			/* 去除input默认样式 */
+			input {
+				border: none;
+				outline: none;
+				color: #333;
+			}
+
+			/* 左浮动 */
+			.fl {
+				float: left;
+			}
+
+			/* 右浮动 */
+			.fr {
+				float: right;
+			}
+
+			/* 双伪元素清除法 */
+			.clearfix::before,
+			.clearfix::after {
+				content: "";
+				display: table;
+			}
+
+			.clearfix::after {
+				clear: both;
+			}
+
+			/* 各个页面相同的样式表 : 头, 尾部 */
+			/* 版心 */
+			.wrapper {
+				width: 1240px;
+				margin: 0 auto;
+			}
+
+			/* 快捷导航 */
+			.shortcut {
+				height: 52px;
+				background-color: #333;
+			}
+
+			.shortcut .wrapper {
+				height: 52px;
+			}
+
+			/* 目的: 所有的文字内容居右侧对齐 */
+			.shortcut .wrapper ul {
+				float: right;
+			}
+
+			/* 目的: 让所有的文字在一行显示 */
+			.shortcut .wrapper li {
+				float: left;
+				line-height: 52px;
+			}
+
+			.shortcut .wrapper a {
+				padding: 0 16px;
+				border-right: 1px solid #666;
+				font-size: 14px;
+				color: #dcdcdc;
+			}
+
+			.shortcut .wrapper a span {
+				display: inline-block;
+				margin-right: 8px;
+				width: 11px;
+				height: 16px;
+				background-image: url("img/sprites.png");
+				background-position: -160px -70px;
+
+				vertical-align: middle;
+			}
+
+			/* 清除a的边框线: 最后一个li里面的a */
+			.shortcut .wrapper li:last-child a {
+				border: 0;
+			}
+
+			/* 头部 */
+			.header {
+				margin: 30px auto;
+				height: 70px;
+			}
+
+			.logo {
+				float: left;
+				width: 207px;
+				height: 70px;
+				text-align: center;
+			}
+
+			/* logo 搜索引擎优化做法 */
+			.logo h1 {
+				width: 207px;
+				height: 70px;
+			}
+
+			.logo h1 a {
+				line-height: 70px;
+				display: block;
+				width: 207px;
+				height: 70px;
+				background-color: #84bb06;
+				/* background-image: url(../images/logo.png); */
+				background-size: contain;
+				/* 目的: 让h1里面的字看不见 */
+				/* font-size: 0; */
+				color: #fff;
+			}
+
+			.nav {
+				float: left;
+				margin-left: 40px;
+				height: 70px;
+			}
+
+			.nav li {
+				float: left;
+				margin-right: 48px;
+				line-height: 70px;
+			}
+
+			.nav li a {
+				padding-bottom: 7px;
+			}
+
+
+			.nav li a:hover {
+				color: #27ba9b;
+				border-bottom: 1px solid #27ba9b;
+			}
+
+			.search {
+				position: relative;
+				float: left;
+				margin-top: 24px;
+				margin-left: 34px;
+				width: 250px;
+				height: 30px;
+				border-bottom: 2px solid #e7e7e7;
+			}
+
+			.search input {
+				padding-left: 30px;
+				width: 250px;
+				height: 28px;
+			}
+
+			.search input::placeholder {
+				font-size: 14px;
+				color: #ccc;
+			}
+
+			.search span {
+				position: absolute;
+				left: 2px;
+				top: 0;
+				/* display: inline-block; */
+				width: 18px;
+				height: 18px;
+				background-image: url("img/sprites.png");
+				background-position: -79px -69px;
+			}
+
+			.car {
+				position: relative;
+				float: right;
+				margin-top: 28px;
+				margin-left: 15px;
+				width: 23px;
+				height: 23px;
+				background-image: url("img/sprites.png");
+				background-position: -119px -69px;
+			}
+
+			.car span {
+				/* 绝对定位, 盒子具备行内块特点 */
+				position: absolute;
+				right: -13px;
+				top: -6px;
+				width: 20px;
+				height: 15px;
+				background-color: #e26237;
+				border-radius: 8px;
+
+				font-size: 13px;
+				color: #fff;
+				text-align: center;
+				line-height: 15px;
+			}
+
+			/* 放index页面的样式表 */
+			/* banner */
+			.banner {
+				height: 250px;
+				/* background-color: #f5f5f5; */
+			}
+
+			.banner .wrapper {
+				position: relative;
+				height: 250px;
+				background-color: #84bb06;
+				/* 利用文本的水平居中属性text-align:center实现图片水平居中 */
+				/* 问题： 导致侧边导航文本也居中 */
+				text-align: center;
+			}
+
+			/* 侧导航 */
+			.banner .aside {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 250px;
+				height: 250px;
+				background-color: rgba(0, 0, 0, .8);
+			}
+
+			.banner .aside li {
+				height: 50px;
+				line-height: 50px;
+			}
+
+			.banner .aside a {
+				position: relative;
+				/* 宽度和父级一样 */
+				padding-left: 36px;
+				padding-right: 19px;
+				display: block;
+				height: 50px;
+
+				color: #fff;
+			}
+
+			.banner .aside a span {
+				margin-left: 15px;
+				font-size: 14px;
+			}
+
+			.banner .aside a:hover {
+				background-color: #27ba9b;
+			}
+
+			/* a的里面最后的位置添加箭头 */
+			.banner .aside a::after {
+				position: absolute;
+				right: 19px;
+				top: 19px;
+				content: '';
+				width: 6px;
+				height: 11px;
+				background-image: url("img/sprites.png");
+				background-position: -80px -110px;
+			}
+
+			/* 箭头 */
+			.next,
+			.prev {
+				position: absolute;
+				top: 128px;
+				width: 45px;
+				height: 45px;
+				background-color: rgba(0, 0, 0, .2);
+				background-image: url("img/sprites.png");
+				border-radius: 50%;
+			}
+
+			/* 背景图位置负责2件事: 改变箭头在盒子里面的位置; 改变精灵图的位置 */
+			/* 导致在精灵图中测量的尺寸不准确 */
+			/* 解决方案有2种: 
+			    1. 书写背景图位置属性, 借助谷歌的调试工具调试具体的位置数值
+			    2. 书写标签的时候, a负责盒子,里面再添加一个span负责箭头
+			*/
+			.prev {
+				left: 260px;
+				background-position: 14px -60px;
+			}
+
+			.next {
+				right: 10px;
+				background-position: -23px -60px;
+			}
+
+			/* 圆点 */
+			.banner ol {
+				position: absolute;
+				left: 680px;
+				bottom: 30px;
+
+				height: 10px;
+			}
+
+			.banner ol li {
+				float: left;
+				margin-right: 24px;
+				width: 10px;
+				height: 10px;
+				background-color: rgba(255, 255, 255, 0.4);
+				border-radius: 50%;
+				cursor: pointer;
+			}
+
+			.banner ol .current {
+				background-color: #fff;
+			}
+
+			/* 版权footer */
+			.footer {
+				height: 342px;
+				background-color: #333;
+			}
+
+			.footer .wrapper {
+				width: 1393px;
+			}
+
+			.footer .top {
+				padding-top: 59px;
+				padding-left: 135px;
+				height: 175px;
+				border-bottom: 3px solid #434343;
+			}
+
+			.footer .top li {
+				position: relative;
+				float: left;
+				margin-right: 300px;
+				width: 195px;
+				height: 58px;
+
+				line-height: 58px;
+			}
+
+			.footer .top li:last-child {
+				margin-right: 0;
+			}
+
+			/* 伪元素添加的标签  行内 */
+			/* 如果行内块和行内文字无法通过vertical-align或行高对齐, 定位 */
+			.footer .top li::before {
+				position: absolute;
+				left: 0;
+				top: 0;
+				/* display: inline-block; */
+				content: '';
+				width: 58px;
+				height: 58px;
+				background-image: url("img/sprites.png");
+				vertical-align: middle;
+			}
+
+			.footer .top li span {
+				margin-left: 77px;
+				font-size: 28px;
+				color: #fff;
+			}
+
+			/* 第二个li里面的berfore添加背景图位置属性 */
+			.footer .top li:nth-child(2)::before {
+				background-position: -128px 0;
+			}
+
+			/* 第三个li里面的berfore添加背景图位置属性 */
+			.footer .top li:nth-child(3)::before {
+				background-position: -64px 0;
+			}
+
+			/* .footer .bottom {
+				padding-top: 40px;
+				font-size: 14px;
+				color: #999;
+				text-align: center;
+			}
+
+			.footer .bottom a {
+				font-size: 14px;
+				color: #999;
+			}
+
+			.footer .bottom p {
+				margin-bottom: 20px;
+			} */
+
+			.footer .bottom {
+				padding-top: 40px;
+				padding-left: 160px;
+				/* font-size: 14px; */
+				color: #999;
+				text-align: center;
+				height: 130px;
+			}
+
+			.footer .bottom a {
+				/* font-size: 14px; */
+				color: #999;
+			}
+
+			.footer .bottom p {
+				/* margin-bottom: 20px; */
+			}
+
+			.footer .bottom dl {
+				float: left;
+				margin-left: 120px;
+				color: #fff;
+			}
+
+			.footer .bottom dt {
+				float: left;
+			}
+
+			.footer .bottom dd {
+				text-align: left;
+			}
+
+			.footer .title_content p {
+				color: #ccc;
+				text-align: center;
+			}
+
+			.black_overlay {
+				display: none;
+				position: absolute;
+				top: 0%;
+				left: 0%;
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				z-index: 1001;
+				-moz-opacity: 0.8;
+				opacity: .80;
+				filter: alpha(opacity=88);
+			}
+
+			.white_content {
+				display: none;
+				position: absolute;
+				top: 25%;
+				left: 25%;
+				width: 50%;
+				height: 50%;
+				padding: 20px;
+				/* border: 10px solid orange; */
+				background-color: white;
+				border-radius: 12px;
+				z-index: 1002;
+				overflow: auto;
+			}
+
+			/* 问题:外层容器height使用百分比时，如何设置line-height可以使里面的文字垂直居中 */
+			/* 
+			解决方法一：
+			父元素设置display:table
+			需要居中的元素 设置 ：
+			vertical-align:middle;
+			display:table-cell;
+			 
+			 解决方法二：
+			 需要居中的元素设置(弹性布局及居中属性) ：
+			 display:flex; //弹性布局，可以应用于容器中，也可以应用于行内元素
+			 align-items:center; //元素在该行的侧轴（纵轴）上居中放置。
+			 justify-content:center; //元素在横轴上居中排列
+			 */
+			.white_content .login_logo {
+				width: 50%;
+				height: 100%;
+				/* text-align: center;
+				display: table; */
+				text-align: center;
+				/*弹性布局及属性*/
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #84bb06;
+				border-radius: 25px;
+			}
+
+			.white_content .login_logo h3 {
+				color: #fff;
+			}
+
+			/* .white_content .login_logo .tab {
+				display: table-cell;
+				vertical-align: middle;
+			} */
+
+			.white_content .login_content {
+				padding-left: 10%;
+				width: 50%;
+				height: 100%;
+				/* background-color: skyblue; */
+			}
+
+			.white_content .login_content span {
+				margin-right: 55%;
+				font-size: 18px;
+			}
+
+			.white_content .login_content .login_content_form {
+				margin-top: 15%;
+			}
+
+			.white_content .login_content .login_content_form p {
+				margin-bottom: 5%;
+			}
+
+			.white_content .login_content .login_content_form p input {
+				caret-color: #4e6ef2;
+				position: relative;
+				z-index: 17;
+				box-sizing: border-box;
+				display: block;
+				padding: 10px 20px;
+				margin: 0;
+				height: 48px;
+				line-height: 20px;
+				width: 90%;
+				border: 1px solid #b8b8b8;
+				font-size: 18px;
+				color: #1f1f1f;
+				transition: .3s;
+				font-family: PingFangSC-Regular, Tahoma, Helvetica, "Microsoft Yahei", "微软雅黑", Arial, STHeiti;
+				border-radius: 8px;
+			}
+
+			.white_content .login_content a {
+				color: #4e6ef2;
+			}
+
+			.white_content .login_content .login_content_form .login_btn {
+				/* width: 336px;
+				height: 48px; */
+				/* line-height: 48px; */
+				background: #84bb06;
+				border-radius: 10px;
+				box-shadow: 0 6px 16px 0 rgb(78 111 242 / 30%);
+				font-size: 17px;
+				font-weight: 800;
+				border: 0;
+				color: #fff;
+				cursor: pointer;
+			}
+
+			.forgot_password {
+				margin-bottom: 5%;
+			}
+
+
+			/* .white_content .login_content .login_content_top::after {
+			  content: '';
+			  display: block;
+			  position: absolute;
+			  bottom: -8px;
+			  left: 0;
+			  right: 0;
+			  height: 2px;
+			  background: #4e6ef2;
+			  border-radius: 1px;
+			} */
+
+			.test {
+				height: 20px;
+				background-color: #fff;
+			}
+
+			/* 新鲜好物 */
+
+			.goods .hd {
+				height: 114px;
+				line-height: 114px;
+			}
+
+			.goods .hd h2 {
+				float: left;
+				font-size: 29px;
+				font-weight: 400;
+
+				height: 114px;
+			}
+
+			.goods .hd h2 span {
+				margin-left: 34px;
+				font-size: 16px;
+				color: #999;
+			}
+
+			.goods .hd .goods_a,
+			.shengxian .hd .more {
+				float: right;
+				color: #999;
+			}
+
+			.goods .hd .goods_a::after,
+			.shengxian .hd .more::after {
+				content: '';
+				display: inline-block;
+				margin-left: 13px;
+				width: 7px;
+				height: 13px;
+				background-image: url("img/sprites.png");
+				background-position: 0 -110px;
+				vertical-align: middle;
+			}
+
+			.goods .bd li {
+				position: relative;
+				float: left;
+				margin-right: 8px;
+				width: 304px;
+				height: 405px;
+				background-color: #f0f9f4;
+				text-align: center;
+			}
+
+			.goods .bd li:last-child {
+				margin-right: 0;
+			}
+
+			.goods .bd li img {
+				width: 304px;
+			}
+
+			.goods .bd li h3 {
+				margin-top: 20px;
+				margin-bottom: 10px;
+				/* font-size: 20px; */
+				font-weight: 400;
+			}
+
+			.goods .bd li div {
+				color: #9a2e1f;
+				font-size: 17px;
+			}
+
+			.goods .bd li div span {
+				font-size: 23px;
+			}
+
+			.goods .bd li b {
+				position: absolute;
+				left: 17px;
+				top: 18px;
+				width: 28px;
+				height: 51px;
+				border: 1px solid #27ba9b;
+				border-radius: 2px;
+				font-size: 18px;
+				color: #27ba9b;
+				font-weight: 400;
+				line-height: 24px;
+			}
+		</style>
+		<script>
+			function pop() {
+				document.getElementById('light').style.display = 'block';
+				document.getElementById('fade').style.display = 'block';
+			}
+
+			function testClose() {
+				document.getElementById('light').style.display = 'none';
+				document.getElementById('fade').style.display = 'none';
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 测试 -->
+
+		<div id="light" class="white_content">
+			<div class="login_logo fl">
+				<div class="tab">
+					<h3>助农网LOGO</h3>
+				</div>
+			</div>
+			<div class="login_content fl">
+				<span>账号登录</span>
+				<a href="javascript:void(0)" onclick="testClose()">关闭</a>
+
+				<form class="login_content_form" action="">
+					<p>
+						<input type="text" value="" placeholder="手机号/用户名/邮箱">
+					</p>
+					<p>
+						<input type="password" value="" placeholder="密码">
+					</p>
+					<a class="forgot_password fr" href="javascript:void(0)">忘记密码？</a>
+					<p>
+						<input class="login_btn" type="submit" value="登录">
+					</p>
+				</form>
+			</div>
+		</div>
+		<!-- 为了底部灰屏显示 -->
+		<div id="fade" class="black_overlay"></div>
+
+		<!-- 快捷导航 -->
+		<div class="shortcut">
+			<div class="wrapper">
+				<ul>
+					<li><a href="javascript:void(0)" onclick="pop()">请先登录</a></li>
+					<li><a href="register.html">免费注册</a></li>
+					<li><a href="#">我的订单</a></li>
+					<li><a href="personal_center.html">会员中心</a></li>
+					<li><a href="#">消息通知</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">在线客服</a></li>
+					<li><a href="#"><span></span>手机版</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 头部 -->
+		<div class="header wrapper">
+			<div class="logo">
+				<h1><a href="#">助农网LOGO</a></h1>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="#fruits">国产水果</a></li>
+					<li><a href="#vegetables">优选蔬菜</a></li>
+					<li><a href="#food">粮油副食</a></li>
+					<li><a href="#meat">肉禽蛋奶</a></li>
+					<li><a href="#snacks">休闲食品</a></li>
+				</ul>
+			</div>
+			<div class="search">
+				<input type="text" placeholder="搜一搜">
+				<!-- 定位 放大镜 -->
+				<span></span>
+			</div>
+			<div class="car">
+				<span>0</span>
+			</div>
+		</div>
+
+		<!-- banner -->
+		<div class="banner">
+			<div class="wrapper">
+				<!-- 有多少个图,就有都少个li -->
+				<ul>
+					<li>
+						<a href="#"><img src="img/index_banner.png" alt=""></a>
+					</li>
+				</ul>
+
+				<!-- 侧导航 -->
+				<div class="aside">
+					<ul>
+						<li>
+							<a href="#">国产水果<span>柑橘类</span></a>
+						</li>
+						<li>
+							<a href="#">优选蔬菜<span>豆角类</span></a>
+						</li>
+						<li>
+							<a href="#">粮油副食<span>大米类</span></a>
+						</li>
+						<li>
+							<a href="#">肉禽蛋奶<span>家禽</span></a>
+						</li>
+						<li>
+							<a href="#">休闲食品<span>坚果</span></a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 箭头 -->
+				<!-- prev: 上一个 -->
+				<a href="#" class="prev"></a>
+				<!-- next : 下一个 -->
+				<a href="#" class="next"></a>
+
+				<!-- 圆点: 当前状态: current / active -->
+				<!-- js 找到用户点击的li 添加类名 li变成白色的 -->
+				<ol>
+					<li></li>
+					<li></li>
+					<li class="current"></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div>
+		</div>
+
+		<!-- 国产水果 -->
+		<div class="goods wrapper">
+			<!-- hd header 头部 -->
+			<div class="hd">
+				<a name="fruits">
+					<h2>国产水果<span>新鲜出炉 品质靠谱</span></h2>
+				</a>
+				<a class="goods_a" href="#">查看全部</a>
+			</div>
+			<!-- body 身体, 内容 -->
+			<div class="bd clearfix">
+				<ul>
+					<li>
+					    <a href="commodity_details.html">
+							<img src="img/pear.jpg" alt="">
+							<h3>新鲜雪梨赵州雪花梨</h3>
+							<div>价格￥<span>19.0</span></div>
+							<b>新品</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/timg_h1am.jpg" alt="">
+							<h3>广东特级番石榴珍珠番石榴芭乐</h3>
+							<div>价格￥<span>29.9</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/myvd.jpg" alt="">
+							<h3>青柚子</h3>
+							<div>价格￥<span>299.0</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/timg(19).jpg"">
+		                    <h3>葡萄柚</h3>
+		                    <div>价格￥<span>66.0</span></div>
+		                </a>
+		            </li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 优选蔬菜 -->
+		<div class="goods wrapper">
+			<!-- hd header 头部 -->
+			<div class="hd">
+				<a name="vegetables">
+					<h2>优选蔬菜<span>新鲜出炉 品质靠谱</span></h2>
+				</a>
+				<a class="goods_a" href="#">查看全部</a>
+			</div>
+			<!-- body 身体, 内容 -->
+			<div class="bd clearfix">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="img/vegetables_bc.jpg" alt="">
+							<h3>有机菠菜</h3>
+							<div>价格￥<span>24.9</span></div>
+							<b>新品</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/vegetables_dj.jpg" alt="">
+							<h3>东北特产油豆角 新鲜蔬菜 油豆角</h3>
+							<div>价格￥<span>12.9</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/vegetables_dbc.jpg"">
+		                    <h3>山东特产新鲜大白菜</h3>
+		                    <div>价格￥<span>6.7</span></div>
+		                </a>
+		            </li>
+		            <li>
+		                <a href=" #">
+							<img src="img/vegetables_jc.jpg" alt="">
+							<h3>农家自产 新鲜韭菜</h3>
+							<div>价格￥<span>19.0</span></div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 粮油副食 -->
+		<div class="goods wrapper">
+			<!-- hd header 头部 -->
+			<div class="hd">
+				<a name="food">
+					<h2>粮油副食<span>新鲜出炉 品质靠谱</span></h2>
+				</a>
+				<a class="goods_a" href="#">查看全部</a>
+			</div>
+			<!-- body 身体, 内容 -->
+			<div class="bd clearfix">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="img/oil.jpg" alt="">
+							<h3>金龙鱼玉米油</h3>
+							<div>价格￥<span>299.0</span></div>
+							<b>新品</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/rice.jpg" alt="">
+							<h3>稻花香米5KG 东北大米</h3>
+							<div>价格￥<span>29.9</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/food_fg.jpg"">
+		                    <h3>桂花糕免切点心</h3>
+		                    <div>价格￥<span>66.0</span></div>
+		                </a>
+		            </li>
+		            <li>
+		                <a href=" #">
+							<img src="img/food_wg.jpg" alt="">
+							<h3>东北三色米农家五谷杂粮饭</h3>
+							<div>价格￥<span>19.0</span></div>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+		<!-- 肉禽蛋奶 -->
+		<div class="goods wrapper">
+			<!-- hd header 头部 -->
+			<div class="hd">
+				<a name="meat">
+					<h2>肉禽蛋奶<span>新鲜出炉 品质靠谱</span></h2>
+				</a>
+				<a class="goods_a" href="#">查看全部</a>
+			</div>
+			<!-- body 身体, 内容 -->
+			<div class="bd clearfix">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="img/timg(2).jpg" alt="">
+							<h3>天然谷饲猪肋排</h3>
+							<div>价格￥<span>24.9</span></div>
+							<b>新品</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/t4zl.jpg" alt="">
+							<h3>黑椒猪排</h3>
+							<div>价格￥<span>12.9</span></div>
+
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/timg(24).jpg"">
+		                    <h3>老母鸡1.3kg 滋补母鸡</h3>
+		                    <div>价格￥<span>6.7</span></div>
+		                </a>
+		            </li>
+		            <li>
+		                <a href=" #">
+							<img src="img/timg(21).jpg" alt="">
+							<h3>正宗苏北农家土鸡蛋</h3>
+							<div>价格￥<span>19.0</span></div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 休闲食品 -->
+		<div class="goods wrapper">
+			<!-- hd header 头部 -->
+			<div class="hd">
+				<a name="snacks">
+					<h2>休闲食品<span>新鲜出炉 品质靠谱</span></h2>
+				</a>
+				<a class="goods_a" href="#">查看全部</a>
+			</div>
+			<!-- body 身体, 内容 -->
+			<div class="bd clearfix">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="img/t2rk.jpg" alt="">
+							<h3>奶香巴旦木</h3>
+							<div>价格￥<span>24.9</span></div>
+							<b>新品</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/timg(11).jpg" alt="">
+							<h3>夏威夷果200gx3袋 送开果器</h3>
+							<div>价格￥<span>12.9</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/timg(10).jpg"">
+		                    <h3>云南高原农家自产天然成熟蜂蜜</h3>
+		                    <div>价格￥<span>6.7</span></div>
+		                </a>
+		            </li>
+		            <li>
+		                <a href=" #">
+							<img src="img/timg(7).jpg" alt="">
+							<h3>正宗靖江猪肉铺浦特产</h3>
+							<div>价格￥<span>19.0</span></div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="test"></div>
+
+		<!-- 底部 -->
+		<!-- 版权区域 -->
+		<div class="footer clearfix">
+			<div class="wrapper">
+				<div class="top">
+					<ul>
+						<li>
+							<!-- 通过伪元素添加标签实现精灵图 -->
+							<span>价格亲民</span>
+						</li>
+						<li>
+							<span>物流快捷</span>
+						</li>
+						<li>
+							<span>品质新鲜</span>
+						</li>
+					</ul>
+				</div>
+				<div class="bottom">
+					<dl>
+						<dt>新手指南</dt>
+						<dd><a href="#">签单验收</a></dd>
+						<dd><a href="#">新手指导</a></dd>
+					</dl>
+					<dl>
+						<dt>配送与支付</dt>
+						<dd><a href="#">运费说明</a></dd>
+						<dd><a href="#">配送说明</a></dd>
+					</dl>
+					<dl>
+						<dt>会员中心</dt>
+						<dd><a href="#">会员介绍</a></dd>
+						<dd><a href="#">积分说明</a></dd>
+					</dl>
+					<dl>
+						<dt>购物须知</dt><br>
+						<dd><a href="#">退货说明</a></dd>
+						<dd><a href="#">订单状态说明</a></dd>
+					</dl>
+					<dl>
+						<dt>服务保证</dt><br>
+						<dd><a href="#">退换货政策</a></dd>
+						<dd><a href="#">退货说明</a></dd>
+					</dl>
+				</div>
+				<!-- <div class="title_content">
+					<p>CopyRight @ 助农网</p>
+				</div> -->
+			</div>
+		</div>
+
+		<!-- <div class="footer clearfix">
+			<div class="wrapper">
+				<div class="top">
+					<ul>
+						<li>
+							<span>价格亲民</span>
+						</li>
+						<li>
+							<span>物流快捷</span>
+						</li>
+						<li>
+							<span>品质新鲜</span>
+						</li>
+					</ul>
+				</div>
+				<div class="bottom">
+					<p>
+						<a href="#">关于我们</a> |
+						<a href="#">帮助中心</a> |
+						<a href="#">售后服务</a> |
+						<a href="#">配送与验收</a> |
+						<a href="#">商务合作</a> |
+						<a href="#">搜索推荐</a> |
+						<a href="#">友情链接</a>
+					</p>
+					<p>CopyRight @ 助农网</p>
+				</div>
+			</div>
+		</div> -->
+	</body>
+</html>
